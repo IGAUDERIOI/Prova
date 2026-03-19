@@ -16,12 +16,14 @@ public class imparPar {
     @GetMapping("/validarNumero")
     public ResponseEntity<parDto> validarNumero(@RequestParam double numero) {
         String imparPar = "";
-        double restoDivisao = numero / 2;
+        double restoDivisao = 0;
 
         if (numero % 2 == 0) {
             imparPar = ("Par");
+            restoDivisao = numero / 2;
         }else if (numero % 3 == 0) {
             imparPar = ("Impar");
+            restoDivisao = numero / 3;
         }
         return ResponseEntity.ok(new parDto(imparPar, restoDivisao));
     }
