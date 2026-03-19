@@ -20,10 +20,8 @@ public class imparPar {
 
         if (numero % 2 == 0) {
             imparPar = ("Par");
-            restoDivisao = numero / 2;
         }else if (numero % 3 == 0) {
             imparPar = ("Impar");
-            restoDivisao = numero / 3;
         }
         return ResponseEntity.ok(new parDto(imparPar, restoDivisao));
     }

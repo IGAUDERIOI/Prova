@@ -5,12 +5,14 @@ public class parDto {
     private double restoDivisao;
     private String imparPar;
 
-    public parDto(double restoDivisao) {
-        this.restoDivisao = restoDivisao;
-    }
 
     public parDto(String imparPar, double restoDivisao) {
         this.imparPar = imparPar;
+        this.restoDivisao = restoDivisao;
+    }
+
+    public double getRestoDivisao() {
+        return restoDivisao;
     }
 
     public void setRestoDivisao(double restoDivisao) {
